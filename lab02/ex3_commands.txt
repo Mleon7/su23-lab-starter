@@ -3,3 +3,14 @@
 # Lines starting with # are comments, feel free to add any to document your commands
 
 # Please add your commands below this line
+1.  b check_number
+2.  run
+3.  n
+    s
+4.  b 31 if letter == '0'
+5.  continue
+6.  print letter
+7.  print is_in_range
+8.  print lower
+9.  print upper
+11. q
