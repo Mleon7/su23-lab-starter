@@ -26,7 +26,28 @@ main:
 # a0 contains the number which we want to compute the factorial of
 # The return value should be stored in a0
 factorial:
-    # YOUR CODE HERE
+    # chatgpt:
+    # Initialize t0 as 1, which will be used to accumulate the factorial value
+    li t0, 1
+
+    # Loop starts here
+factorial_loop:
+    # If a0 is 0, the factorial is 1 (base case)
+    beqz a0, factorial_done
+
+    # Multiply the current factorial value (t0) by the current value of a0
+    mul t0, t0, a0
+
+    # Decrement a0 by 1 for the next iteration
+    addi a0, a0, -1
+
+    # Repeat the loop
+    j factorial_loop
+
+    # Loop ends here
+factorial_done:
+    # Store the result in a0
+    mv a0, t0
 
     # This is how you return from a function. You'll learn more about this later.
     # This should be the last line in your program.
